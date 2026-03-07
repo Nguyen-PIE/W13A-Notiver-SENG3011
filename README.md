@@ -102,21 +102,7 @@ Run:
 npm run dev
 ```
 
-## Linting
-The CI/CD workflow uses Ruff for linting. Therefore the instructions below also use Ruff for linting purposes.
-
-To install Ruff:
-Run
-```bash
-pip install ruff
-```
-
-To run linting:
-Run
-```bash
-ruff check .
-```
-
+---
 
 ## Testing and Coverage
 As mentioned in the Engineering Proposal, Pytest is used as the architecture for testing.
@@ -140,9 +126,24 @@ pytest --cov=. --cov-report=term-missing
 ```
 
 
+## Linting
+The CI/CD workflow uses Ruff for linting. Therefore, the instructions below also use Ruff for linting purposes.
+
+To install Ruff:
+Run
+```bash
+pip install ruff
+```
+
+To run linting:
+Run
+```bash
+ruff check .
+```
+
 
 ## CI/CD Pipeline Workflow
-The pipeline will trigger in the following circumstances
+The pipeline will trigger in the following circumstances:
 * Creating a pull (merge) request with main
 * Pulling (merging) into main
 
