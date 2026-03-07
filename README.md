@@ -102,3 +102,56 @@ Run:
 npm run dev
 ```
 
+## Linting
+The CI/CD workflow uses Ruff for linting. Therefore the instructions below also use Ruff for linting purposes.
+
+To install Ruff:
+Run
+```bash
+pip install ruff
+```
+
+To run linting:
+Run
+```bash
+ruff check .
+```
+
+
+## Testing and Coverage
+As mentioned in the Engineering Proposal, Pytest is used as the architecture for testing.
+
+To install Pytest:
+Run
+```bash
+pip install pytest pytest-cov
+```
+
+To run tests (without coverage):
+Run
+```bash
+pytest
+```
+
+To run tests (with coverage):
+Run
+```bash
+pytest --cov=. --cov-report=term-missing
+```
+
+
+
+## CI/CD Pipeline Workflow
+The pipeline will trigger in the following circumstances
+* Creating a pull (merge) request with main
+* Pulling (merging) into main
+
+The pipeline checks for the following:
+* All tests pass (using Pytest)
+* Tests cover 100% of the code (using pytest-coverage)
+* Linting (using Ruff)
+
+After the pipeline runs, in addition to the information presented in output, a coverage report will be generated and viewable from GitHub Actions:
+```bash
+Actions > Click on the appropriate workflow run > Artifacts > View the coverage report HTML
+```
