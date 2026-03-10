@@ -1,0 +1,41 @@
+{
+    "data_source": "google news or boscar data",
+    "data_type": "article or dataset",
+    "version": "v1",
+    "dataset_id:": 0,
+    "time_object": {
+        "date_collected": "2026-01-01",
+        "timezone": "GMT+11"
+    },
+    "events": [
+        {
+            "time_object": {
+                "date_published": "2026-01-01",
+                "timezone": "GMT+11"
+            },
+            "name": "article name",
+            "author": "author",
+            "title": "title",
+            "url": "www.news.com",
+            "description": "sentence or two of description",
+            "sentiment": 0.5,
+            "offence_type": "theft",
+            "lga": "lga"
+        },
+        {
+            "time_object" : {
+                "date_start": "2024-10-01",
+                "date_end": "2025-09-30",
+                "timezone": "GMT+11"
+            },
+            "lga": "lga",
+            "offence_type": "theft",
+            "rate_per_100k": 2.4,
+            "lga_rank": 1,
+            "ten_year_trend": "increasing",
+            "ten_year_percent_change": 5.5
+        }
+    ]
+}
+
+
