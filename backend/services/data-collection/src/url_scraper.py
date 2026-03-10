@@ -2,7 +2,6 @@ import requests
 import time
 import random
 import calendar
-#  python test_scraper.py
 def get_random_monthly_articles(start_year, end_year, filename="guardian_crime_urls.txt"):
     print(f"Fetching 1 random article per month from {start_year} to {end_year}...")
     print(f"Saving URLs to: {filename}\n")
