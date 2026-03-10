@@ -1,8 +1,0 @@
-#!/Users/pn/Desktop/UNSW/SENG3011/W13A-Notiver-SENG3011/backend/services/data-collection/.venv/bin/python3
-# -*- coding: utf-8 -*-
-import re
-import sys
-from fastapi.cli import main
-if __name__ == '__main__':
-    sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])
-    sys.exit(main())
