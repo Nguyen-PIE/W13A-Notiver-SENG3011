@@ -30,6 +30,7 @@
             },
             "lga": "lga",
             "offence_type": "theft",
+            "offence_count": 10,
             "rate_per_100k": 2.4,
             "lga_rank": 1,
             "ten_year_trend": "increasing",
