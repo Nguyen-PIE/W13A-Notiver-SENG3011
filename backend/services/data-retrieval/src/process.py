@@ -63,11 +63,13 @@ def sentiment_scores(events):
     return sent_scores
 
 
-def stat_score(lga_stats, pop_data, exponent=100000):
+def stat_score(lga_stats, pop_data):
+    exponent = 1000000
     stat_scores = {}
 
     for lga, stats in lga_stats.items():
 
+        # need to get population data somewhere
         pop = pop_data.get(lga)
 
         if not pop or pop == 0:
