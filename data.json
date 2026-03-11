@@ -20,7 +20,7 @@
             "description": "sentence or two of description",
             "sentiment": 0.5,
             "offence_type": "theft",
-            "lga": "lga"
+            "suburb": "suburb"
         },
         {
             "time_object" : {
