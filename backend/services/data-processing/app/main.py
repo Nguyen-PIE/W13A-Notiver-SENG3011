@@ -46,6 +46,8 @@ except FileNotFoundError:
 
 sorted_suburbs = sorted(suburb_data.keys(), key=len, reverse=True)
 
+
+## need to determine a function that disregards article if the crime is general and not location based (edge case: politician tax evasion)
 def get_location_metadata(text):
     text_lower = text.lower()
     for suburb_name in sorted_suburbs:
