@@ -55,14 +55,12 @@ def process_retrieval():
             print(f"Error processing {file_key}: {e}")
 
     lga_sentiment_scores = sentiment_scores(events)
-    lga_stat_scores = stat_score(lga_aggregate(events))
-    lga_total_crimes = count_total_crimes(())
-    lga_total_articles = count_total_articles((events))
+    lga_aggregate_scores = lga_aggregate(events)
+    lga_stat_scores = stat_score(lga_aggregate_scores)
+    lga_total_articles = count_total_articles(events)
 
-    upload_lga_overall_data(lga_sentiment_scores, lga_stat_scores, lga_total_crimes, lga_total_articles)
+    upload_lga_overall_data(lga_sentiment_scores, lga_stat_scores, lga_aggregate_scores, lga_total_articles)
 
-
-    # put into dynamo 
     
     # Overall stats
     # lga | sentiment | statistical | total crimes | total articles
@@ -72,7 +70,7 @@ def process_retrieval():
     # lga | year | sentiment | stats | total | violent | theft | property | drugs | judicial | other 
 
 
-def upload_lga_overall_data(lga_sentiment_scores, lga_stat_scores, lga_total_crimes, lga_total_articles):
+def upload_lga_overall_data(lga_sentiment_scores, lga_stat_scores, lga_aggregate_scores, lga_total_articles):
     table_entries = defaultdict(lambda: {
         "sentiment_score": 0,
         "statistical_score": 0,
@@ -86,8 +84,8 @@ def upload_lga_overall_data(lga_sentiment_scores, lga_stat_scores, lga_total_cri
     for lga, stat_score in lga_stat_scores.items():
         table_entries[lga]["statistical_score"] = str(stat_score)
 
-    for lga, crime_count in lga_total_crimes.items():
-        table_entries[lga]["total_crimes"] = crime_count
+    for lga in lga_aggregate_scores:
+        table_entries[lga]["total_crimes"] = lga_aggregate_scores[lga]["total_crimes"]
 
     for lga, article_count in lga_total_articles.items():
         table_entries[lga]["total_articles"] = article_count
@@ -107,11 +105,12 @@ def upload_lga_overall_data(lga_sentiment_scores, lga_stat_scores, lga_total_cri
         for item in data:
             writer.put_item(Item=item)
 
-    # Note that it looks like table format isn't set up on AWS yet??
-
 
 def upload_lga_by_year_data():
+    table_entries = defaultdict(lambda: {
 
+
+    })
     # Implementation
 
     return
@@ -127,14 +126,6 @@ def count_total_articles(events):
             total_articles[lga] += 1
     
     return total_articles
-
-
-def count_total_crimes(events):
-    total_crimes = {}
-
-    # Calculate total crimes per lga
-
-    return total_crimes
 
 
 def lga_aggregate(events):
@@ -187,7 +178,7 @@ def sentiment_scores(events):
     return sent_scores
 
 
-# might need to revise statistical scores - don't think we're using Shanelle's data yet so this might be calculated wrong?
+# need to revise statistical scores - don't think we're using Shanelle's data yet so this might be calculated wrong?
 def stat_score(lga_stats):
     exponent = 1000000
     stat_scores = {}
