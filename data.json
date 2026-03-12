@@ -1,8 +1,8 @@
 {
     "data_source": "google news or boscar data",
     "data_type": "article or dataset",
-    "version": "v1, maybe not needed?",
-    "dataset_id:": "also not sure if this is needed",
+    "version": "v1",
+    "dataset_id:": 0,
     "time_object": {
         "date_collected": "2026-01-01",
         "timezone": "GMT+11"
