@@ -1,8 +1,75 @@
-from collections import defaultdict
-from crime_categories import CRIME_WEIGHTS
+import boto3
+import json
+import sys
+import os
 
-def get_lga_from_suburb(suburb):
-    return "PLACEHOLDER_LGA"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+PARENT_DIR = os.path.abspath(os.path.join(BASE_DIR, ".."))
+
+if PARENT_DIR not in sys.path:
+    sys.path.append(PARENT_DIR)
+
+from collections import defaultdict
+from crime_dict import CRIME_WEIGHTS
+from LGAData import get_lga_population
+
+S3_BUCKET_NAME = "nsw-crime-data-bucket"
+REGION = "ap-southeast-2"
+PROFILE_NAME = "notiver"
+
+events = []
+
+# Initialise AWS session and connect to S3 data
+try:
+    session = boto3.Session(profile_name=PROFILE_NAME)
+    s3 = session.client('s3', region_name=REGION)
+except Exception:
+    s3 = boto3.client('s3', region_name=REGION)
+
+# Connect to DynamoDB data
+# dynamo = boto3.resource('dynamo', region_name=REGION)
+# lga_overall_table = dynamo.Table('lga-overall')
+# lga_by_year_table = dynamo.Table('lga-by-year')
+
+
+def process_retrieval():
+    response = s3.list_objects_v2(Bucket=S3_BUCKET_NAME, Prefix="nlp_processed/")
+
+    if 'Contents' not in response:
+        print("No articles found.")
+        return
+    
+    for obj in response['Contents']:
+        file_key = obj['Key']
+        if not file_key.endswith('.json'):
+            continue
+        
+        try:
+            file_obj = s3.get_object(Bucket=S3_BUCKET_NAME, Key=file_key)
+            text_content = file_obj['Body'].read().decode('utf-8')
+            
+            data = json.loads(text_content)
+            events.append(data)
+
+        except Exception as e:
+            print(f"Error processing {file_key}: {e}")
+
+    lga_sentiment_scores = sentiment_scores(events)
+    lga_stat_scores = stat_score(lga_aggregate(events))
+                        
+    print(lga_sentiment_scores)
+    print(lga_stat_scores)
+
+
+    # put into dynamo 
+    
+    # Overall stats
+    # lga | sentiment | statistical | total crimes | total articles
+
+
+    # By year
+    # lga | year | sentiment | stats | total | violent | theft | property | drugs | judicial | other 
+
 
 
 def lga_aggregate(events):
@@ -15,13 +82,9 @@ def lga_aggregate(events):
 
         suburb = event.get("suburb")
         offence_type = event.get("offence_type")
+        lga = event.get("lga")
 
-        if not suburb or not offence_type:
-            continue
-
-        lga = get_lga_from_suburb(suburb)
-
-        if not lga:
+        if not suburb or not offence_type or lga == "LGA not found":
             continue
 
         offence_type = offence_type.lower()
@@ -41,18 +104,14 @@ def sentiment_scores(events):
 
     for event in events:
 
-        sentiment = event.get("sentiment")
+        severity = event.get("severity_score")
         suburb = event.get("suburb")
+        lga = event.get("lga")
 
-        if sentiment is None or not suburb:
+        if severity is None or not suburb or lga == "LGA not found":
             continue
 
-        lga = get_lga_from_suburb(suburb)
-
-        if not lga:
-            continue
-
-        sent_sum[lga] = sent_sum.get(lga, 0) + sentiment
+        sent_sum[lga] = sent_sum.get(lga, 0) + severity
         sent_count[lga] = sent_count.get(lga, 0) + 1
 
     sent_scores = {}
@@ -63,16 +122,16 @@ def sentiment_scores(events):
     return sent_scores
 
 
-def stat_score(lga_stats, pop_data):
+def stat_score(lga_stats):
     exponent = 1000000
     stat_scores = {}
 
     for lga, stats in lga_stats.items():
 
         # need to get population data somewhere
-        pop = pop_data.get(lga)
+        pop = get_lga_population(lga)
 
-        if not pop or pop == 0:
+        if pop == -1 or pop == 0:
             continue
 
         weighted_sum = stats["weighted_crime_score"]
@@ -82,22 +141,6 @@ def stat_score(lga_stats, pop_data):
         stat_scores[lga] = score
 
     return stat_scores
-
-
-def process_retrieval():
-    
-    # 1. getting from s3 
-    
-    #p rocessing stuff
-    
-    # put into dynamo 
-    
-    # Overall stats
-    # lga | sentiment | statistical | total crimes | total articles
-
-
-    # By year
-    # lga | year | sentiment | stats | total | violent | theft | property | drugs | judicial | other 
 
 
 if __name__ == "__main__":

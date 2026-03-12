@@ -1,0 +1,752 @@
+{
+    "ALBURY CITY COUNCIL": {
+        "Region": "Riverina",
+        "Area (sq km)": "307",
+        "Population": "56,093",
+        "Pop Density (people per sq km)": "182.71"
+    },
+    "ARMIDALE REGIONAL COUNCIL": {
+        "Region": "New England",
+        "Area (sq km)": "8,621",
+        "Population": "29,124",
+        "Pop Density (people per sq km)": "3.38"
+    },
+    "BALLINA SHIRE COUNCIL": {
+        "Region": "Northern Rivers",
+        "Area (sq km)": "484",
+        "Population": "46,296",
+        "Pop Density (people per sq km)": "95.65"
+    },
+    "BALRANALD SHIRE COUNCIL": {
+        "Region": "Riverina",
+        "Area (sq km)": "21,693",
+        "Population": "2,208",
+        "Pop Density (people per sq km)": "0.1"
+    },
+    "BATHURST REGIONAL COUNCIL": {
+        "Region": "Central West",
+        "Area (sq km)": "3,820",
+        "Population": "43,567",
+        "Pop Density (people per sq km)": "11.4"
+    },
+    "BAYSIDE COUNCIL": {
+        "Region": "St George-Sutherland",
+        "Area (sq km)": "50",
+        "Population": "175,184",
+        "Pop Density (people per sq km)": "3,503.68"
+    },
+    "BEGA VALLEY SHIRE COUNCIL": {
+        "Region": "South Coast",
+        "Area (sq km)": "6,279",
+        "Population": "35,942",
+        "Pop Density (people per sq km)": "5.72"
+    },
+    "BELLINGEN SHIRE COUNCIL": {
+        "Region": "Mid North Coast",
+        "Area (sq km)": "1,602",
+        "Population": "13,253",
+        "Pop Density (people per sq km)": "8.27"
+    },
+    "BERRIGAN SHIRE COUNCIL": {
+        "Region": "Riverina",
+        "Area (sq km)": "2,066",
+        "Population": "8,665",
+        "Pop Density (people per sq km)": "4.19"
+    },
+    "BLACKTOWN CITY COUNCIL": {
+        "Region": "Western Sydney",
+        "Area (sq km)": "247",
+        "Population": "396,776",
+        "Pop Density (people per sq km)": "1,606.38"
+    },
+    "BLAND SHIRE COUNCIL": {
+        "Region": "Central West / Riverina",
+        "Area (sq km)": "8,560",
+        "Population": "5,547",
+        "Pop Density (people per sq km)": "0.65"
+    },
+    "BLAYNEY SHIRE COUNCIL": {
+        "Region": "Central West",
+        "Area (sq km)": "1,525",
+        "Population": "7,497",
+        "Pop Density (people per sq km)": "4.92"
+    },
+    "BLUE MOUNTAINS CITY COUNCIL": {
+        "Region": "Western Sydney / Blue Mountains",
+        "Area (sq km)": "1,432",
+        "Population": "78,121",
+        "Pop Density (people per sq km)": "54.55"
+    },
+    "BOGAN SHIRE COUNCIL": {
+        "Region": "Orana",
+        "Area (sq km)": "14,611",
+        "Population": "2,467",
+        "Pop Density (people per sq km)": "0.17"
+    },
+    "BOURKE SHIRE COUNCIL": {
+        "Region": "Orana",
+        "Area (sq km)": "41,679",
+        "Population": "2,340",
+        "Pop Density (people per sq km)": "0.06"
+    },
+    "BREWARRINA SHIRE COUNCIL": {
+        "Region": "Orana",
+        "Area (sq km)": "19,188",
+        "Population": "1,356",
+        "Pop Density (people per sq km)": "0.07"
+    },
+    "BROKEN HILL CITY COUNCIL": {
+        "Region": "Far West",
+        "Area (sq km)": "170",
+        "Population": "17,588",
+        "Pop Density (people per sq km)": "101.69"
+    },
+    "BURWOOD COUNCIL": {
+        "Region": "Inner West",
+        "Area (sq km)": "7",
+        "Population": "40,217",
+        "Pop Density (people per sq km)": "5,745.28"
+    },
+    "BYRON SHIRE COUNCIL": {
+        "Region": "Central West",
+        "Area (sq km)": "3,659",
+        "Population": "5,580",
+        "Pop Density (people per sq km)": "1.52"
+    },
+    "CABONNE SHIRE COUNCIL": {
+        "Region": "Central West",
+        "Area (sq km)": "6,026",
+        "Population": "13,766",
+        "Pop Density (people per sq km)": "2.28"
+    },
+    "CAMDEN COUNCIL": {
+        "Region": "Macarthur / Western Sydney",
+        "Area (sq km)": "201",
+        "Population": "119,325",
+        "Pop Density (people per sq km)": "593.66"
+    },
+    "CAMPBELLTOWN CITY COUNCIL": {
+        "Region": "Macarthur / Western Sydney",
+        "Area (sq km)": "312",
+        "Population": "176,519",
+        "Pop Density (people per sq km)": "565.77"
+    },
+    "CITY OF CANADA BAY COUNCIL": {
+        "Region": "Inner West",
+        "Area (sq km)": "20",
+        "Population": "89,177",
+        "Pop Density (people per sq km)": "4,458.85"
+    },
+    "CANTERBURY-BANKSTOWN COUNCIL": {
+        "Region": "Inner West / Western Sydney",
+        "Area (sq km)": "72",
+        "Population": "371,006",
+        "Pop Density (people per sq km)": "5,152.86"
+    },
+    "CARRATHOOL SHIRE COUNCIL": {
+        "Region": "Central West / Riverina",
+        "Area (sq km)": "18,933",
+        "Population": "2,866",
+        "Pop Density (people per sq km)": "0.15"
+    },
+    "CENTRAL COAST COUNCIL": {
+        "Region": "Central Coast",
+        "Area (sq km)": "1,681",
+        "Population": "346,596",
+        "Pop Density (people per sq km)": "206.18"
+    },
+    "CENTRAL DARLING SHIRE COUNCIL": {
+        "Region": "Far West",
+        "Area (sq km)": "53,511",
+        "Population": "1,725",
+        "Pop Density (people per sq km)": "0.03"
+    },
+    "CESSNOCK CITY COUNCIL": {
+        "Region": "Hunter",
+        "Area (sq km)": "1,966",
+        "Population": "63,632",
+        "Pop Density (people per sq km)": "32.37"
+    },
+    "CLARENCE VALLEY COUNCIL": {
+        "Region": "Northern Rivers",
+        "Area (sq km)": "10,441",
+        "Population": "54,115",
+        "Pop Density (people per sq km)": "5.18"
+    },
+    "COBAR SHIRE COUNCIL": {
+        "Region": "Orana",
+        "Area (sq km)": "44,065",
+        "Population": "4,059",
+        "Pop Density (people per sq km)": "0.09"
+    },
+    "COFFS HARBOUR CITY COUNCIL": {
+        "Region": "Mid North Coast",
+        "Area (sq km)": "1,175",
+        "Population": "78,759",
+        "Pop Density (people per sq km)": "67.03"
+    },
+    "COOLAMON SHIRE COUNCIL": {
+        "Region": "Riverina",
+        "Area (sq km)": "2,433",
+        "Population": "4,385",
+        "Pop Density (people per sq km)": "1.8"
+    },
+    "COONAMBLE SHIRE COUNCIL": {
+        "Region": "Orana",
+        "Area (sq km)": "9,926",
+        "Population": "3,732",
+        "Pop Density (people per sq km)": "0.37"
+    },
+    "COOTAMUNDRA-GUNDAGAI REGIONAL COUNCIL": {
+        "Region": "Riverina",
+        "Area (sq km)": "3,981",
+        "Population": "11,403",
+        "Pop Density (people per sq km)": "2.86"
+    },
+    "COWRA SHIRE COUNCIL": {
+        "Region": "Central West",
+        "Area (sq km)": "2,810",
+        "Population": "12,724",
+        "Pop Density (people per sq km)": "4.53"
+    },
+    "CUMBERLAND COUNCIL": {
+        "Region": "Western Sydney",
+        "Area (sq km)": "72",
+        "Population": "235,439",
+        "Pop Density (people per sq km)": "3,269.99"
+    },
+    "DUBBO REGIONAL COUNCIL": {
+        "Region": "Orana",
+        "Area (sq km)": "7,536",
+        "Population": "54,922",
+        "Pop Density (people per sq km)": "7.29"
+    },
+    "DUNGOG SHIRE COUNCIL": {
+        "Region": "Hunter",
+        "Area (sq km)": "2,251",
+        "Population": "9,541",
+        "Pop Density (people per sq km)": "4.24"
+    },
+    "EDWARD RIVER COUNCIL": {
+        "Region": "Riverina",
+        "Area (sq km)": "8,881",
+        "Population": "8,456",
+        "Pop Density (people per sq km)": "0.95"
+    },
+    "EUROBODALLA SHIRE COUNCIL": {
+        "Region": "South Coast",
+        "Area (sq km)": "3,428",
+        "Population": "40,593",
+        "Pop Density (people per sq km)": "11.84"
+    },
+    "FAIRFIELD CITY COUNCIL": {
+        "Region": "Western Sydney",
+        "Area (sq km)": "102",
+        "Population": "208,475",
+        "Pop Density (people per sq km)": "2,043.87"
+    },
+    "FEDERATION COUNCIL": {
+        "Region": "Riverina",
+        "Area (sq km)": "5,685",
+        "Population": "12,899",
+        "Pop Density (people per sq km)": "2.27"
+    },
+    "FORBES SHIRE COUNCIL": {
+        "Region": "Central West",
+        "Area (sq km)": "4,720",
+        "Population": "9,319",
+        "Pop Density (people per sq km)": "1.97"
+    },
+    "GEORGES RIVER COUNCIL": {
+        "Region": "St George-Sutherland",
+        "Area (sq km)": "38",
+        "Population": "152,274",
+        "Pop Density (people per sq km)": "4,007.21"
+    },
+    "GILGANDRA SHIRE COUNCIL": {
+        "Region": "Orana",
+        "Area (sq km)": "4,836",
+        "Population": "4,295",
+        "Pop Density (people per sq km)": "0.89"
+    },
+    "GLEN INNES SEVERN SHIRE COUNCIL": {
+        "Region": "New England",
+        "Area (sq km)": "5,487",
+        "Population": "8,931",
+        "Pop Density (people per sq km)": "1.63"
+    },
+    "GOULBURN MULWAREE COUNCIL": {
+        "Region": "Southern Tablelands",
+        "Area (sq km)": "3,220",
+        "Population": "32,053",
+        "Pop Density (people per sq km)": "9.95"
+    },
+    "GREATER HUME SHIRE COUNCIL": {
+        "Region": "Riverina",
+        "Area (sq km)": "5,746",
+        "Population": "11,157",
+        "Pop Density (people per sq km)": "1.94"
+    },
+    "GRIFFITH CITY COUNCIL": {
+        "Region": "Riverina",
+        "Area (sq km)": "1,640",
+        "Population": "27,086",
+        "Pop Density (people per sq km)": "16.51"
+    },
+    "GUNNEDAH SHIRE COUNCIL": {
+        "Region": "New England",
+        "Area (sq km)": "4,994",
+        "Population": "12,929",
+        "Pop Density (people per sq km)": "2.59"
+    },
+    "GWYDIR SHIRE COUNCIL": {
+        "Region": "New England",
+        "Area (sq km)": "9,453",
+        "Population": "4,910",
+        "Pop Density (people per sq km)": "0.52"
+    },
+    "HAWKESBURY CITY COUNCIL": {
+        "Region": "Western Sydney",
+        "Area (sq km)": "2,793",
+        "Population": "67,207",
+        "Pop Density (people per sq km)": "24.06"
+    },
+    "HAY SHIRE COUNCIL": {
+        "Region": "Riverina",
+        "Area (sq km)": "11,326",
+        "Population": "2,882",
+        "Pop Density (people per sq km)": "0.25"
+    },
+    "THE HILLS SHIRE COUNCIL": {
+        "Region": "Hills District",
+        "Area (sq km)": "401",
+        "Population": "191,876",
+        "Pop Density (people per sq km)": "478.49"
+    },
+    "HILLTOPS COUNCIL": {
+        "Region": "Southern Tablelands",
+        "Area (sq km)": "7,139",
+        "Population": "19,254",
+        "Pop Density (people per sq km)": "41.67"
+    },
+    "THE COUNCIL OF THE SHIRE OF HORNSBY": {
+        "Region": "North Shore / Northern Suburbs",
+        "Area (sq km)": "462",
+        "Population": "151,811",
+        "Pop Density (people per sq km)": "328.59"
+    },
+    "THE COUNCIL OF THE MUNICIPALITY OF KIAMA": {
+        "Region": "Northern Suburbs",
+        "Area (sq km)": "6",
+        "Population": "13,559",
+        "Pop Density (people per sq km)": "2,259.83"
+    },
+    "INNER WEST COUNCIL": {
+        "Region": "Inner West",
+        "Area (sq km)": "35",
+        "Population": "182,818",
+        "Pop Density (people per sq km)": "5,223.37"
+    },
+    "INVERELL SHIRE COUNCIL": {
+        "Region": "New England",
+        "Area (sq km)": "8,606",
+        "Population": "17,853",
+        "Pop Density (people per sq km)": "2.07"
+    },
+    "JUNEE SHIRE COUNCIL": {
+        "Region": "Riverina",
+        "Area (sq km)": "2,030",
+        "Population": "6,415",
+        "Pop Density (people per sq km)": "3.16"
+    },
+    "KEMPSEY SHIRE COUNCIL": {
+        "Region": "Mid North Coast",
+        "Area (sq km)": "3,380",
+        "Population": "30,688",
+        "Pop Density (people per sq km)": "9.08"
+    },
+    "MOSMAN MUNICIPAL COUNCIL": {
+        "Region": "North Shore",
+        "Area (sq km)": "9",
+        "Population": "28,329",
+        "Pop Density (people per sq km)": "3,147.67"
+    },
+    "KU-RING-GAI COUNCIL": {
+        "Region": "North Shore",
+        "Area (sq km)": "86",
+        "Population": "124,076",
+        "Pop Density (people per sq km)": "1,442.74"
+    },
+    "KYOGLE COUNCIL": {
+        "Region": "Northern Rivers",
+        "Area (sq km)": "3,589",
+        "Population": "9,359",
+        "Pop Density (people per sq km)": "2.61"
+    },
+    "LACHLAN SHIRE COUNCIL": {
+        "Region": "New England",
+        "Area (sq km)": "2,621",
+        "Population": "3,016",
+        "Pop Density (people per sq km)": "1.15"
+    },
+    "LAKE MACQUARIE CITY COUNCIL": {
+        "Region": "Hunter",
+        "Area (sq km)": "648",
+        "Population": "213,845",
+        "Pop Density (people per sq km)": "330"
+    },
+    "LANE COVE MUNICIPAL COUNCIL": {
+        "Region": "North Shore",
+        "Area (sq km)": "11",
+        "Population": "39,438",
+        "Pop Density (people per sq km)": "3,585.27"
+    },
+    "LEETON SHIRE COUNCIL": {
+        "Region": "Riverina",
+        "Area (sq km)": "1,167",
+        "Population": "11,452",
+        "Pop Density (people per sq km)": "9.81"
+    },
+    "LISMORE CITY COUNCIL": {
+        "Region": "Northern Rivers",
+        "Area (sq km)": "1,290",
+        "Population": "44,334",
+        "Pop Density (people per sq km)": "34.37"
+    },
+    "LITHGOW CITY COUNCIL": {
+        "Region": "Central West / Blue Mountains",
+        "Area (sq km)": "4,551",
+        "Population": "20,842",
+        "Pop Density (people per sq km)": "4.58"
+    },
+    "LIVERPOOL CITY COUNCIL": {
+        "Region": "Western Sydney",
+        "Area (sq km)": "306",
+        "Population": "233,446",
+        "Pop Density (people per sq km)": "762.89"
+    },
+    "LIVERPOOL PLAINS SHIRE COUNCIL": {
+        "Region": "New England",
+        "Area (sq km)": "5,086",
+        "Population": "7,551",
+        "Pop Density (people per sq km)": "1.48"
+    },
+    "LOCKHART SHIRE COUNCIL": {
+        "Region": "Riverina",
+        "Area (sq km)": "2,895",
+        "Population": "3,319",
+        "Pop Density (people per sq km)": "0.08"
+    },
+    "MAITLAND CITY COUNCIL": {
+        "Region": "Hunter",
+        "Area (sq km)": "392",
+        "Population": "90,226",
+        "Pop Density (people per sq km)": "230.17"
+    },
+    "MID-COAST COUNCIL": {
+        "Region": "Mid North Coast",
+        "Area (sq km)": "10,053",
+        "Population": "96,579",
+        "Pop Density (people per sq km)": "9.6"
+    },
+    "MID-WESTERN REGIONAL COUNCIL": {
+        "Region": "Central West",
+        "Area (sq km)": "8,737",
+        "Population": "25,713",
+        "Pop Density (people per sq km)": "2.94"
+    },
+    "MOREE PLAINS SHIRE COUNCIL": {
+        "Region": "New England",
+        "Area (sq km)": "17,930",
+        "Population": "12,751",
+        "Pop Density (people per sq km)": "0.71"
+    },
+    "MURRAY RIVER COUNCIL": {
+        "Region": "Riverina",
+        "Area (sq km)": "11,865",
+        "Population": "12,850",
+        "Pop Density (people per sq km)": "1.08"
+    },
+    "MURRUMBIDGEE COUNCIL": {
+        "Region": "Riverina",
+        "Area (sq km)": "6,880",
+        "Population": "3,353",
+        "Pop Density (people per sq km)": "0.49"
+    },
+    "MUSWELLBROOK SHIRE COUNCIL": {
+        "Region": "Hunter",
+        "Area (sq km)": "3,405",
+        "Population": "16,357",
+        "Pop Density (people per sq km)": "4.8"
+    },
+    "NAMBUCCA VALLEY COUNCIL": {
+        "Region": "Mid North Coast",
+        "Area (sq km)": "1,491",
+        "Population": "20,407",
+        "Pop Density (people per sq km)": "13.69"
+    },
+    "NARRANDERA SHIRE COUNCIL": {
+        "Region": "Riverina",
+        "Area (sq km)": "4,117",
+        "Population": "5,698",
+        "Pop Density (people per sq km)": "1.38"
+    },
+    "NARRABRI SHIRE COUNCIL": {
+        "Region": "North West Slopes / Northern Tablelands",
+        "Area (sq km)": "13,031",
+        "Population": "12,703",
+        "Pop Density (people per sq km)": "0.97"
+    },
+    "NARROMINE SHIRE COUNCIL": {
+        "Region": "Orana",
+        "Area (sq km)": "5,264",
+        "Population": "6,360",
+        "Pop Density (people per sq km)": "1.21"
+    },
+    "NEWCASTLE CITY COUNCIL": {
+        "Region": "Hunter",
+        "Area (sq km)": "187",
+        "Population": "168,873",
+        "Pop Density (people per sq km)": "903.06"
+    },
+    "NORTHERN BEACHES COUNCIL": {
+        "Region": "Northern Beaches",
+        "Area (sq km)": "254",
+        "Population": "263,554",
+        "Pop Density (people per sq km)": "1,037.61"
+    },
+    "NORTH SYDNEY COUNCIL": {
+        "Region": "North Shore",
+        "Area (sq km)": "11",
+        "Population": "68,950",
+        "Pop Density (people per sq km)": "6,268.18"
+    },
+    "ORANGE CITY COUNCIL": {
+        "Region": "Central West",
+        "Area (sq km)": "285",
+        "Population": "43,512",
+        "Pop Density (people per sq km)": "152.67"
+    },
+    "PARKES SHIRE COUNCIL": {
+        "Region": "Central West",
+        "Area (sq km)": "5,958",
+        "Population": "14,361",
+        "Pop Density (people per sq km)": "2.41"
+    },
+    "CITY OF PARRAMATTA COUNCIL": {
+        "Region": "Western Sydney / Northern Suburbs",
+        "Area (sq km)": "82",
+        "Population": "256,729",
+        "Pop Density (people per sq km)": "3,130.84"
+    },
+    "PENRITH CITY COUNCIL": {
+        "Region": "Western Sydney",
+        "Area (sq km)": "405",
+        "Population": "217,664",
+        "Pop Density (people per sq km)": "537.44"
+    },
+    "PORT MACQUARIE-HASTINGS COUNCIL": {
+        "Region": "Mid North Coast",
+        "Area (sq km)": "3,686",
+        "Population": "86,762",
+        "Pop Density (people per sq km)": "23.54"
+    },
+    "PORT STEPHENS COUNCIL": {
+        "Region": "Hunter",
+        "Area (sq km)": "979",
+        "Population": "75,276",
+        "Pop Density (people per sq km)": "76.89"
+    },
+    "QUEANBEYAN-PALERANG REGIONAL COUNCIL": {
+        "Region": "Southern Tablelands",
+        "Area (sq km)": "8,960",
+        "Population": "63,304",
+        "Pop Density (people per sq km)": "7.06"
+    },
+    "RANDWICK CITY COUNCIL": {
+        "Region": "Eastern Suburbs",
+        "Area (sq km)": "36",
+        "Population": "134,252",
+        "Pop Density (people per sq km)": "3,729.22"
+    },
+    "RICHMOND VALLEY COUNCIL": {
+        "Region": "Northern Rivers",
+        "Area (sq km)": "3,051",
+        "Population": "23,565",
+        "Pop Density (people per sq km)": "7.72"
+    },
+    "RYDE CITY COUNCIL": {
+        "Region": "Sydney CBD",
+        "Area (sq km)": "25",
+        "Population": "211,632",
+        "Pop Density (people per sq km)": "8,465.28"
+    },
+    "SINGLETON COUNCIL": {
+        "Region": "Hunter",
+        "Area (sq km)": "4,893",
+        "Population": "24,577",
+        "Pop Density (people per sq km)": "5.02"
+    },
+    "SHELLHARBOUR CITY COUNCIL": {
+        "Region": "Illawarra / South Coast",
+        "Area (sq km)": "147",
+        "Population": "76,271",
+        "Pop Density (people per sq km)": "518.85"
+    },
+    "SHOALHAVEN CITY COUNCIL": {
+        "Region": "South Coast",
+        "Area (sq km)": "4,567",
+        "Population": "108,531",
+        "Pop Density (people per sq km)": "23.76"
+    },
+    "SNOWY MONARO REGIONAL COUNCIL": {
+        "Region": "Snowy Mountains / Monaro",
+        "Area (sq km)": "15,162",
+        "Population": "21,666",
+        "Pop Density (people per sq km)": "1.43"
+    },
+    "SNOWY VALLEYS COUNCIL": {
+        "Region": "Riverina",
+        "Area (sq km)": "8,960",
+        "Population": "14,891",
+        "Pop Density (people per sq km)": "1.66"
+    },
+    "STRATHFIELD MUNICIPAL COUNCIL": {
+        "Region": "Inner West",
+        "Area (sq km)": "14",
+        "Population": "45,593",
+        "Pop Density (people per sq km)": "3,256.64"
+    },
+    "SUTHERLAND SHIRE COUNCIL": {
+        "Region": "St George-Sutherland",
+        "Area (sq km)": "370",
+        "Population": "230,211",
+        "Pop Density (people per sq km)": "622.19"
+    },
+    "TAMWORTH REGIONAL COUNCIL": {
+        "Region": "New England",
+        "Area (sq km)": "9,892",
+        "Population": "63,070",
+        "Pop Density (people per sq km)": "6.37"
+    },
+    "TEMORA SHIRE COUNCIL": {
+        "Region": "Riverina",
+        "Area (sq km)": "2,802",
+        "Population": "6,034",
+        "Pop Density (people per sq km)": "2.15"
+    },
+    "TENTERFIELD SHIRE COUNCIL": {
+        "Region": "New England",
+        "Area (sq km)": "7,332",
+        "Population": "6,810",
+        "Pop Density (people per sq km)": "0.93"
+    },
+    "TWEED SHIRE COUNCIL": {
+        "Region": "Northern Rivers",
+        "Area (sq km)": "1,321",
+        "Population": "97,392",
+        "Pop Density (people per sq km)": "73.72"
+    },
+    "UNINCORPORATED": {
+        "Region": "Far West",
+        "Area (sq km)": "93,300",
+        "Population": "1,016",
+        "Pop Density (people per sq km)": "0.01"
+    },
+    "UPPER HUNTER SHIRE COUNCIL": {
+        "Region": "Hunter",
+        "Area (sq km)": "8,096",
+        "Population": "14,229",
+        "Pop Density (people per sq km)": "1.76"
+    },
+    "UPPER LACHLAN SHIRE COUNCIL": {
+        "Region": "Southern Tablelands",
+        "Area (sq km)": "7,102",
+        "Population": "8,514",
+        "Pop Density (people per sq km)": "1.2"
+    },
+    "URALLA SHIRE COUNCIL": {
+        "Region": "New England",
+        "Area (sq km)": "3,230",
+        "Population": "5,971",
+        "Pop Density (people per sq km)": "1.85"
+    },
+    "WAGGA WAGGA CITY COUNCIL": {
+        "Region": "Riverina",
+        "Area (sq km)": "4,826",
+        "Population": "67,609",
+        "Pop Density (people per sq km)": "14"
+    },
+    "WALGETT SHIRE COUNCIL": {
+        "Region": "Orana",
+        "Area (sq km)": "22,336",
+        "Population": "5,253",
+        "Pop Density (people per sq km)": "0.23"
+    },
+    "WARREN SHIRE COUNCIL": {
+        "Region": "Orana",
+        "Area (sq km)": "10,760",
+        "Population": "2,550",
+        "Pop Density (people per sq km)": "0.24"
+    },
+    "WARRUMBUNGLE SHIRE COUNCIL": {
+        "Region": "Orana",
+        "Area (sq km)": "12,380",
+        "Population": "9,225",
+        "Pop Density (people per sq km)": "0.74"
+    },
+    "WAVERLEY COUNCIL": {
+        "Region": "Eastern Suburbs",
+        "Area (sq km)": "9",
+        "Population": "68,605",
+        "Pop Density (people per sq km)": "7,622.78"
+    },
+    "WEDDIN SHIRE COUNCIL": {
+        "Region": "Central West",
+        "Area (sq km)": "3,410",
+        "Population": "3,608",
+        "Pop Density (people per sq km)": "1.06"
+    },
+    "WENTWORTH SHIRE COUNCIL": {
+        "Region": "Riverina",
+        "Area (sq km)": "26,269",
+        "Population": "7,453",
+        "Pop Density (people per sq km)": "0.28"
+    },
+    "WILLOUGHBY CITY COUNCIL": {
+        "Region": "North Shore",
+        "Area (sq km)": "23",
+        "Population": "75,613",
+        "Pop Density (people per sq km)": "3,287.52"
+    },
+    "WINGECARRIBEE SHIRE COUNCIL": {
+        "Region": "Illawarra / Southern Highlands",
+        "Area (sq km)": "2,689",
+        "Population": "52,709",
+        "Pop Density (people per sq km)": "19.6"
+    },
+    "WOLLONDILLY SHIRE COUNCIL": {
+        "Region": "Macarthur / Western Sydney",
+        "Area (sq km)": "2,560",
+        "Population": "53,961",
+        "Pop Density (people per sq km)": "21.08"
+    },
+    "WOLLONGONG CITY COUNCIL": {
+        "Region": "Illawarra",
+        "Area (sq km)": "684",
+        "Population": "214,564",
+        "Pop Density (people per sq km)": "313.69"
+    },
+    "WOOLLAHRA MUNICIPAL COUNCIL": {
+        "Region": "Eastern Suburbs",
+        "Area (sq km)": "12",
+        "Population": "53,496",
+        "Pop Density (people per sq km)": "4,458"
+    },
+    "YASS VALLEY COUNCIL": {
+        "Region": "Southern Tablelands / Riverina",
+        "Area (sq km)": "3,999",
+        "Population": "17,281",
+        "Pop Density (people per sq km)": "4.32"
+    }
+}
