@@ -27,9 +27,9 @@ except Exception:
     s3 = boto3.client('s3', region_name=REGION)
 
 # Connect to DynamoDB data
-# dynamo = boto3.resource('dynamo', region_name=REGION)
-# lga_overall_table = dynamo.Table('lga-overall')
-# lga_by_year_table = dynamo.Table('lga-by-year')
+dynamodb = session.resource('dynamodb', region_name=REGION)
+lga_overall_table = dynamodb.Table('lga-overall')
+lga_by_year_table = dynamodb.Table('lga-by-year')
 
 
 def process_retrieval():
@@ -56,9 +56,10 @@ def process_retrieval():
 
     lga_sentiment_scores = sentiment_scores(events)
     lga_stat_scores = stat_score(lga_aggregate(events))
-                        
-    print(lga_sentiment_scores)
-    print(lga_stat_scores)
+    lga_total_crimes = count_total_crimes(())
+    lga_total_articles = count_total_articles((events))
+
+    upload_lga_overall_data(lga_sentiment_scores, lga_stat_scores, lga_total_crimes, lga_total_articles)
 
 
     # put into dynamo 
@@ -70,6 +71,70 @@ def process_retrieval():
     # By year
     # lga | year | sentiment | stats | total | violent | theft | property | drugs | judicial | other 
 
+
+def upload_lga_overall_data(lga_sentiment_scores, lga_stat_scores, lga_total_crimes, lga_total_articles):
+    table_entries = defaultdict(lambda: {
+        "sentiment_score": 0,
+        "statistical_score": 0,
+        "total_crimes": 0,
+        "total_articles": 0
+    })
+
+    for lga, sent_score in lga_sentiment_scores.items():
+        table_entries[lga]["sentiment_score"] = str(sent_score)
+    
+    for lga, stat_score in lga_stat_scores.items():
+        table_entries[lga]["statistical_score"] = str(stat_score)
+
+    for lga, crime_count in lga_total_crimes.items():
+        table_entries[lga]["total_crimes"] = crime_count
+
+    for lga, article_count in lga_total_articles.items():
+        table_entries[lga]["total_articles"] = article_count
+
+    data = []
+    for key, value in table_entries.items():
+        item = {
+            "lga": key,
+            "sentiment_score": value["sentiment_score"],
+            "statistical_score": value["statistical_score"],
+            "total_crimes": value["total_crimes"],
+            "total_articles": value["total_articles"]
+        }
+        data.append(item)
+
+    with lga_overall_table.batch_writer() as writer:
+        for item in data:
+            writer.put_item(Item=item)
+
+    # Note that it looks like table format isn't set up on AWS yet??
+
+
+def upload_lga_by_year_data():
+
+    # Implementation
+
+    return
+
+
+def count_total_articles(events):
+    total_articles = defaultdict(int)
+
+    for event in events:
+        lga = event.get("lga")
+
+        if lga != "LGA not found":
+            total_articles[lga] += 1
+    
+    return total_articles
+
+
+def count_total_crimes(events):
+    total_crimes = {}
+
+    # Calculate total crimes per lga
+
+    return total_crimes
 
 
 def lga_aggregate(events):
@@ -122,6 +187,7 @@ def sentiment_scores(events):
     return sent_scores
 
 
+# might need to revise statistical scores - don't think we're using Shanelle's data yet so this might be calculated wrong?
 def stat_score(lga_stats):
     exponent = 1000000
     stat_scores = {}
