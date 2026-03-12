@@ -16,7 +16,6 @@ class Event(BaseModel):
     offence_type: str = Field(alias=config.RAW_OFFENCE_COL)
     offence_count: int = Field(alias='count')
     rate_per_100k: Optional[float] = Field(default=None, alias=config.RAW_RATE_COL)
-    lga_rank: Optional[int] = Field(default=None, alias=config.RAW_RANK_COL)
     ten_year_trend: Optional[str] = None
     ten_year_percent_change: Optional[float] = None
     time_object: DataTimeObject

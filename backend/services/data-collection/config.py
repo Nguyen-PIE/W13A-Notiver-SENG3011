@@ -9,7 +9,6 @@ VERSION="v1"
 RAW_LGA_COL = "Local Government Area"
 RAW_OFFENCE_COL = "Offence type"
 RAW_RATE_COL = "Rate per 100,000 population Oct 2024 - Sep 2025"
-RAW_RANK_COL = "LGA Rank \n Oct 2024 - Sep 2025"
 RAW_TREND_COL = "10 year trend and average annual percent change (Oct 2015-Sep 2025)"
 
 # for processing rows

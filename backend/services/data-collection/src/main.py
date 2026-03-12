@@ -3,6 +3,12 @@ import boto3
 import newspaper
 from botocore.exceptions import NoCredentialsError
 from dotenv import load_dotenv
+from fastapi import FastAPI
+from routes import router
+
+app = FastAPI()
+
+app.include_router(router)
 
 # Load secrets from the .env file
 load_dotenv()

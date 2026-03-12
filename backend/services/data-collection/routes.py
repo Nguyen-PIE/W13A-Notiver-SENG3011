@@ -34,13 +34,12 @@ def process_excel(my_file: UploadFile = File(...)):
     # clean data
     df[config.RAW_OFFENCE_COL] = df[config.RAW_OFFENCE_COL].str.replace(r'\*', '', regex=True).str.strip()
     df[config.RAW_RATE_COL] = df[config.RAW_RATE_COL].astype(object).replace('nc', None)
-    df[config.RAW_RANK_COL] = df[config.RAW_RANK_COL].astype(object).replace('nc', None)
     df[config.RAW_TREND_COL] = df[config.RAW_TREND_COL].astype(object).replace('nc', None)
     df = df.astype(object).where(pd.notnull(df), other=None)
     
     # melt data into years
-    id_vars = [config.RAW_LGA_COL, config.RAW_OFFENCE_COL, config.RAW_RATE_COL, config.RAW_RANK_COL, config.RAW_TREND_COL]
-    year_cols = [col for col in df.columns if re.match(r'^Oct \d{4}\s*-\s*Sep \d{4}$', str(col).strip())]
+    id_vars = [config.RAW_LGA_COL, config.RAW_OFFENCE_COL, config.RAW_RATE_COL, config.RAW_TREND_COL]
+    year_cols = [col for col in df.columns if re.match(r'^Oct \d{4}\s*-\s*Sep \d{4}$', str(col).strip())][-5:]
     df_melted = df.melt(id_vars=id_vars, value_vars=year_cols, var_name='year_range', value_name='count')
     
     # create json objects
@@ -54,7 +53,6 @@ def process_excel(my_file: UploadFile = File(...)):
             offence_type=row[config.RAW_OFFENCE_COL],
             offence_count=row['count'],
             rate_per_100k=row[config.RAW_RATE_COL],
-            lga_rank=row[config.RAW_RANK_COL],
             ten_year_trend=trend['direction'],
             ten_year_percent_change=trend['percent'],
             time_object={
