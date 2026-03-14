@@ -35,7 +35,7 @@ def get_data():
             }
         )
     except Exception as e:
-        raise HTTPException(status_code=404, detail="File not found on S3")
+        raise HTTPException(status_code=404, detail=f"Error finding file: {e}")
 
 @router.post("/upload-articles")
 def post_articles():

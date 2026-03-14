@@ -1,7 +1,7 @@
-import os
-import boto3
+# import os
+# import boto3
 # import newspaper
-from botocore.exceptions import NoCredentialsError
+# from botocore.exceptions import NoCredentialsError
 # from dotenv import load_dotenv
 from fastapi import FastAPI
 from api.routes import router
