@@ -16,3 +16,5 @@ target/
 .idea/
 .venv/
 **/.venv/
+guardian_crime_urls.txt
+AWSCLIV2.pkg

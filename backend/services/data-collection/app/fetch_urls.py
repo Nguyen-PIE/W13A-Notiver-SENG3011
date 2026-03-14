@@ -2,6 +2,9 @@ import requests
 import time
 import random
 import calendar
+import os
+
+
 def get_random_monthly_articles(start_year, end_year, filename="guardian_crime_urls.txt"):
     print(f"Fetching 1 random article per month from {start_year} to {end_year}...")
     print(f"Saving URLs to: {filename}\n")
@@ -70,4 +73,7 @@ def get_random_monthly_articles(start_year, end_year, filename="guardian_crime_u
     print("\nDone! All links successfully saved.")
 
 if __name__ == "__main__":
-    get_random_monthly_articles(2021, 2025)
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    SAVE_PATH = os.path.join(BASE_DIR, "..", "guardian_crime_urls.txt")
+  
+    get_random_monthly_articles(2021, 2025, filename=SAVE_PATH)
