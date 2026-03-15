@@ -18,3 +18,4 @@ target/
 **/.venv/
 guardian_crime_urls.txt
 AWSCLIV2.pkg
+.ruff_cache
