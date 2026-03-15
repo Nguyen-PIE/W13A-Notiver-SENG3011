@@ -55,6 +55,8 @@ def run_nlp_pipeline():
 
     processed_count = 0
     skipped_count = 0
+    
+    all_processed_data = []
 
     for obj in response['Contents']:
         file_key = obj['Key']
@@ -78,37 +80,59 @@ def run_nlp_pipeline():
             
             sentiment_results = sentiment_task(text_content[:1500])
             scores = {res['label']: round(res['score'], 4) for res in sentiment_results[0]}
-            negative_severity = scores.get('negative', 0)
+            negative_sentiment = scores.get('negative', 0)
 
             base_id = file_key.split('/')[-1].replace('.txt', '')
             output_json = {
                 "object_id": base_id,
                 "source_type": "news",
                 "offence_type": offence,
-                "severity_score": negative_severity,
+                "sentiment_score": negative_sentiment,
                 "when": article_date,
                 "suburb": loc['suburb'],
                 "lga": loc['lga'],
                 "postcode": loc['postcode']
             }
 
-            json_data = json.dumps(output_json, indent=4)
-            
-            new_s3_key = f"{config.NLP_BUCKET_NAME}/{base_id}.json"
-            
-            s3.put_object(
-                Bucket=config.S3_BUCKET_NAME,
-                Key=new_s3_key,
-                Body=json_data,
-                ContentType='application/json'
-            )
+            all_processed_data.append(output_json)
             processed_count += 1
             
         except Exception as e:
             print(f"Error processing {file_key}: {e}")
+
+    if all_processed_data:
+        try:
+            final_json_data = json.dumps(all_processed_data, indent=4)
+            bulk_s3_key = f"{config.NLP_BUCKET_NAME}/all_processed_articles.json"
+            
+            s3.put_object(
+                Bucket=config.S3_BUCKET_NAME,
+                Key=bulk_s3_key,
+                Body=final_json_data,
+                ContentType='application/json'
+            )
+            print(f"Successfully uploaded bulk file: s3://{config.S3_BUCKET_NAME}/{bulk_s3_key}")
+        except Exception as e:
+            print(f"Error uploading bulk JSON file: {e}")
 
     return {
         "status": "success", 
         "processed": processed_count, 
         "skipped": skipped_count
     }
+
+def fetch_processed_data():
+    """Fetches the aggregated JSON file from S3."""
+    bulk_s3_key = f"{config.NLP_BUCKET_NAME}/all_processed_articles.json"
+    
+    try:
+        response = s3.get_object(Bucket=config.S3_BUCKET_NAME, Key=bulk_s3_key)
+        file_content = response['Body'].read().decode('utf-8')
+        
+        # Parse JSON string into a Python list/dictionary
+        return json.loads(file_content)
+        
+    except s3.exceptions.NoSuchKey:
+        return {"error": "No processed data found. Please run the NLP pipeline first."}
+    except Exception as e:
+        raise Exception(f"Failed to fetch data from S3: {str(e)}")
