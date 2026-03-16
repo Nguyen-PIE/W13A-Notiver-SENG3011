@@ -19,3 +19,5 @@ target/
 guardian_crime_urls.txt
 AWSCLIV2.pkg
 .ruff_cache
+package/
+deployment.zip
